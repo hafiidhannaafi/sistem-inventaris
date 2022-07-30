@@ -321,7 +321,7 @@ Route::middleware(['auth', 'check.role:2'])->group(
 
 //-- SEMUA ROUTE ROLE STAFF ( ROLE 3)--//
 
-Route::middleware(['auth', 'check.role:1'])->group(
+Route::middleware(['auth', 'check.role:3'])->group(
     function () {
         //SIDEBAR STAFF /ROLE 3
         Route::get('/peminjaman/form', function () {

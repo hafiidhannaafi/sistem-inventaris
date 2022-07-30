@@ -286,8 +286,8 @@
                     @else
                     @endif
                 </td> --}}
-                {{-- <a href="/data-asetbergerak/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
-                        <a href="/data-asetbergerak/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a> --}}
+                {{-- {{-- <a href="/data-asetbergerak/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a> --}}
+                <a href="/peminjaman/form" type="button" class="btn btn-danger btn-sm">pinjam</a>
                 </td>
                 @endif
                 @endforeach
