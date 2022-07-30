@@ -21,8 +21,6 @@
                         <h5 class="card-title"> Silakan Cek Data Barang </h5>
 
 
-                        {{-- <a href="/data-asetbergerak/form" type="button"  class="btn btn" style="background-color:  #012970; color:#FFFFFF">Tambah</a> --}}
-
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
                             <thead>
@@ -287,7 +285,8 @@
                     @endif
                 </td> --}}
                 {{-- {{-- <a href="/data-asetbergerak/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a> --}}
-                <a href="/peminjaman/form" type="button" class="btn btn-danger btn-sm">pinjam</a>
+                <a href="/pinjam/formulir/{{ $data->id }}" type="button"
+                    class="btn btn-danger btn-sm">pinjam</a>
                 </td>
                 @endif
                 @endforeach

@@ -11,6 +11,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BarangKeluarController;
 use App\Http\Controllers\BarangMasukController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\PinjamController;
 use App\Http\Controllers\AuthController;
 
 
@@ -331,6 +332,24 @@ Route::middleware(['auth', 'check.role:3'])->group(
         Route::get('/peminjaman/riwayat', function () {
             return view('peminjaman.riwayat');
         });
+
+
+        //PINJAM NEW
+
+        Route::get(
+            '/pinjam/formulir',
+            function () {
+                return view('pinjam.formulir');
+            }
+        );
+        Route::get('/pinjam/formulir/{id}', [PinjamController::class, 'index']);
+        Route::get(
+            '/inputpinjam/{id}',
+            'App\Http\Controllers\PinjamController@create'
+        )->name('inputpinjam');
+
+
+
 
         //PEMINJAMAN STAFF
         Route::POST('inputpeminjaman', 'App\Http\Controllers\PeminjamanController@create')->name('inputpeminjaman');
