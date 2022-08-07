@@ -21,6 +21,6 @@ class CheckRole
             return $next($request);
         }
 
-        abort(403);
+        return redirect()->route('dashboard');
     }
 }
